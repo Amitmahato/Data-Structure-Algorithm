@@ -33,9 +33,7 @@ public:
             }
         else
         {
-            T temp = q[Front];
-            Front += 1;
-            return temp;
+            return q[Front++];
         }
     }
 
@@ -81,9 +79,9 @@ main()
             case 3:
                 {
                     if(q.isEmpty())
-                        cout<<"The stack is empty."<<endl;
+                        cout<<"The queue is empty."<<endl;
                     else
-                        cout<<"No, The stack isn't empty."<<endl;
+                        cout<<"No, The queue isn't empty."<<endl;
 
                     break;
                 }
@@ -95,7 +93,7 @@ main()
         }
         cout<<"\n Operate on the queue again? Supply any value for yes and 'n'/'N' for no : ";
         cin>>ans;
-        if((ans='n') || (ans = 'N'))
+        if((ans == 'n') || (ans == 'N'))
             break;
         system("cls");
     }
